@@ -1,0 +1,27 @@
+﻿@page
+@model World.Web.Pages.CountryModel
+@{
+}
+
+<h2>
+    Country List
+</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Short Name</td>
+            <td>Country Code</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Countries)
+        {
+            <tr>
+                <td>@item.CountryName</td>
+                <td>@item.CountrySmallName</td>
+                <td>@item.CountryCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
